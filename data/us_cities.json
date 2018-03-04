@@ -1,0 +1,89 @@
+{
+  "title": "US Cities Geography game",
+  "description": "Geography game to learn about US cities",
+  "main": {
+    "welcome": "You will have to catch a fictional character, but keep your brains sharp as you will need it."
+  },
+  "gameplay": {
+    "welcome": "Landmarco Steallioni has just stolen an important landmark, can you catch him before he can get away with it.",
+    "success": "You have successfully caught Landmarco Steallioni and restored sanity.",
+    "failure": "Landmarco Steallioni has escaped your grasp. Better luck next time."
+  },
+  "data": {
+    "sfo": {
+      "name": "San Francisco",
+      "description": "San Francisco, officially the City and County of San Francisco, is the cultural, commercial, and financial center of Northern California",
+      "spelled_as": "/ˌsæn frənˈsɪskoʊ, fræn-/",
+      "wikipedia": "https://www.wikiwand.com/en/San_Francisco",
+      "wikitravel": "https://wikitravel.org/en/San_Francisco",
+      "locations": [],
+      "nicknames": {
+        "The Golden City": {},
+        "The Paris of the West": {},
+        "The City by the Bay": {},
+        "‘Frisco": {},
+        "San Fran": {},
+        "SF": {}
+      },
+      "landmarks": {
+        "Golden Gate Bridge": {
+          "description": "",
+          "tidbits": [
+            "The Frommer's travel guide describes it as possibly the most beautiful, certainly the most photographed, bridge in the world",
+            "One of the most iconic bridges in the United States, and has been called one of the Seven Wonders of the Modern World",
+            "If you untangled all of its cables, they would stretch around the world 3 times"
+          ]
+        },
+        "Alcatraz Island": {
+          "tidbits": [
+            "It was developed with facilities for a lighthouse, a military fortification, a military prison",
+            "It had a federal prison from 1934 to 1963",
+            "During its 29 years of operation, the penitentiary claimed that no prisoner successfully escaped"
+          ]
+        },
+        "Lombard Street": {
+          "tidbits": [
+            "This street is famous for a steep, one-block section with eight hairpin turns. ",
+            "The famous one-block section, claimed to be \"the crookedest street in the world\"",
+            ""
+          ]
+        },
+        "Pier 39": {
+          "tidbits": [
+            "Its famous for sea lions.",
+            "You can take a cruise to under a famous bridge."
+          ]
+        },
+        "Cable Cars": {
+          "tidbits": [
+            "World's last manually operated cable car system."
+          ]
+        }
+      }
+    },
+    "nyc": {
+      "name": "New York",
+      "description": "",
+      "wikipedia": "",
+      "wikitravel": "",
+      "locations": [],
+      "nicknames": {
+      },
+      "landmarks": {
+        "Brooklyn Bridge": {}
+      }
+    },
+    "washington": {
+      "name": "New York",
+      "description": "",
+      "wikipedia": "",
+      "wikitravel": "",
+      "locations": [],
+      "nicknames": {
+      },
+      "landmarks": {
+        "The White House": {}
+      }
+    }
+  }
+}
