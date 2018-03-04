@@ -1,17 +1,23 @@
 let inquirer = require('inquirer');
 
 
+main();
+
+
+// Main entry for the program
 async function main() {
     let prompt = inquirer.createPromptModule();
 
     let userInfo = await prompt([ {
         type: 'input',
         name: 'name',
-        message: 'What is your name'
+        message: 'What is your name',
+        validate: validator
     }, {
         type: 'input',
-        name: 'name',
-        message: 'What is your user name'
+        name: 'username',
+        message: 'What is your user name',
+        validate: validator
     }]);
     console.log(userInfo);
 
@@ -30,4 +36,9 @@ async function main() {
     console.log(answer);
 }
 
-main();
+
+// Simple input validator
+function validator(str) {
+    return (str && str.length > 0);
+}
+
