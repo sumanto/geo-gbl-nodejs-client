@@ -1,4 +1,4 @@
-// process.env.DEBUG = process.env.DEBUG ? process.env.DEBUG : 'geo,geo:fine';
+process.env.DEBUG = process.env.DEBUG ? process.env.DEBUG : 'geo,geo:fine';
 
 let inquirer = require('inquirer');
 let fs = require('fs');
@@ -18,6 +18,9 @@ async function main() {
 
     let contents = fs.readFileSync(path.join(__dirname, 'data', 'us_cities.json'), 'utf8');
     let data = JSON.parse(contents);
+
+    let gameMetaDatacontents = fs.readFileSync(path.join(__dirname, 'data', 'game_metadata.json'), 'utf8');
+    let metadata = JSON.parse(gameMetaDatacontents);
 
     console.log('Welcome to ' + data.title);
     addSeparator();
@@ -53,6 +56,10 @@ async function main() {
     console.log('Lets get some information about you');
     addNewLines(1);
 
+
+    //--------------------------------------------
+    // User information
+    //
     let userInfo = await prompt([ {
         type: 'input',
         name: 'name',
@@ -71,10 +78,28 @@ async function main() {
     console.log('** Welcome ' + userInfo.name);
     addSeparator();
 
+
+    //--------------------------------------------
+    // TODO: Start with LA, but randomize later
+    //
     let city = data.data.sfo;
     console.log('You are in %s, also known as %s', city.name, getRandomData(Object.keys(city.nicknames)));
     addSeparator();
 
+
+    //--------------------------------------------
+    // Randomly choose attributes for the thief
+    //
+    let thiefAttributes = {};
+    for (let key of Object.keys(metadata.attributes)) {
+       let values =  Object.keys(metadata.attributes[key]);
+       thiefAttributes[key] = getRandomData(values);
+    }
+    d('thief attributes:', JSON.stringify(thiefAttributes));
+
+
+    //--------------------------------------------
+    //
     let allTidbits = [];
     let tidbitLandmark = {};
     let landmarks = Object.keys(city.landmarks);

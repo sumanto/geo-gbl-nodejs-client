@@ -1,0 +1,56 @@
+{
+  "attributes": {
+    "sex": {
+      "male": {},
+      "female": {}
+    },
+    "eyes": {
+      "amber": {},
+      "blue": {},
+      "brown": {},
+      "gray": {},
+      "green": {},
+      "hazel": {},
+      "red": {}
+    },
+    "hair": {
+      "black": {},
+      "blond": {},
+      "copper": {},
+      "red": {},
+      "grey": {},
+      "white": {},
+      "bald": {}
+    },
+    "hobby": {
+      "fishing": {},
+      "photography": {},
+      "knitting": {},
+      "birdwatching": {},
+      "running": {}
+    },
+    "food": {
+      "American": {},
+      "Indian": {},
+      "Mexican": {},
+      "Italian": {},
+      "Japanese": {}
+    },
+    "feature": {
+      "hat": {},
+      "cap": {},
+      "sunglasses": {},
+      "contacts": {},
+      "jewellery": {},
+      "scar": {},
+      "tatoo": {}
+    },
+    "vehicle": {
+      "suv": {},
+      "sports car": {},
+      "sedan": {},
+      "station wagon": {},
+      "bike": {}
+    }
+  }
+}
