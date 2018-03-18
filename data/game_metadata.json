@@ -52,5 +52,76 @@
       "station wagon": {},
       "bike": {}
     }
+  },
+  "person-places": {
+    "policeman": [ "park", "museum", "cafe" ],
+    "tourist": [ "market", "museum", "cafe" ],
+    "farmer": [ "farm", "farmers market" ],
+    "nanny": [ "child care center" ],
+    "artist": [ "studio", "museum", "cafe" ],
+    "musician": [],
+    "actor": [],
+    "diplomat": [],
+    "truck driver": [ "truck stop" ],
+    "bus driver": [ "bus stop", "bus depot" ],
+    "dentist": [ "office" ],
+    "student": [ "school", "cafeteria" ],
+    "flight attendent": [ "airport" ]
+  },
+  "evidence-items": {
+    "all": {
+      "wallet": {
+      },
+      "road map": {
+      },
+      "travel guide": {
+      },
+      "bounced check": {
+      },
+      "architectural drawings": {
+      },
+      "notebook": {
+      },
+      "money belt": {
+      }
+    },
+    "wrong": {
+      "wallet": {
+        "description": [
+          "The wallet is empty."
+        ]
+      },
+      "bounced check": {
+        "description": []
+      },
+      "notebook": {
+        "description": [
+          "The notebook is empty.",
+          "The notebook has some beautiful drawings of people."
+        ]
+      },
+      "money belt": {
+        "wrong-place": [
+          "The money-belt is empty."
+        ]
+      }
+    }
+  },
+  "wrong-person": {
+    "person": [
+      "I am new to this place. I don't think I can help.",
+      "Sorry, I am in a hurry and can't help.",
+      "Maybe you can try tourist information desk?",
+      "I didn't see the person you are describing. Do you want to buy some Girls Scouts Candy?",
+      "I haven't seen anyone like that. But do you want to hear a story?",
+      "I can't help with that. But I can give you directions."
+    ]
+  },
+  "flight": {
+    "line2": [
+      "Hope you can catch some sleep.",
+      "Hope you like the on-flight movie.",
+      "Hope you like the on-flight meal."
+    ]
   }
 }
