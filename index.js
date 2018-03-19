@@ -1,10 +1,11 @@
-process.env.DEBUG = process.env.DEBUG ? process.env.DEBUG : 'geo,geo:fine';
+// process.env.DEBUG = process.env.DEBUG ? process.env.DEBUG : 'geo,geo:fine';
 
 let inquirer = require('inquirer');
 let fs = require('fs');
 let path = require('path');
 let d = require('debug')('geo');
 let d_f = require('debug')('geo:fine');
+let _ = require('lodash');
 
 
 main();
@@ -82,8 +83,8 @@ async function main() {
     //--------------------------------------------
     // TODO: Start with LA, but randomize later
     //
-    let city = data.data.sfo;
-    console.log('You are in %s, also known as %s', city.name, getRandomData(Object.keys(city.nicknames)));
+    let city = data.cities.la;
+    console.log('You are in %s, also known as %s', city.name, getRandomData(city.nicknames));
     addSeparator();
 
 
@@ -103,6 +104,7 @@ async function main() {
     let allTidbits = [];
     let tidbitLandmark = {};
     let landmarks = Object.keys(city.landmarks);
+    d(landmarks);
     for (let i = 0; i < landmarks.length; i++) {
         let landmark = landmarks[i];
         let tidbits = city.landmarks[landmark].tidbits;
@@ -112,12 +114,132 @@ async function main() {
         }
     }
 
+    d(tidbitLandmark);
     let chosenTidbit = getRandomData(allTidbits);
     let chosenLandmark = tidbitLandmark[chosenTidbit];
 
-    let correct = false;
+    console.log('%s', city.description);
 
+    let stolen = getRandomData(city.steal);
+    console.log('The master thief has stolen %s', stolen);
+    addSeparator();
+
+
+    let found = false;
+    let correctCity = false;
+    let cityChoice = null;
+    let nextCorrectCity = data.cities[getRandomData(Object.keys(data.cities))].name;
+
+    while (!found) {
+        let person = getRandomData(Object.keys(metadata['person-places']));
+        let personAction = getRandomData(metadata['person-actions']) + ' ' + person;
+
+        let place = getRandomData(metadata['person-places'][person]);
+        let placeAction = getRandomData(metadata['place-actions']) + ' ' + place;
+
+        d('** %s', personAction);
+        d('** %s', placeAction);
+
+        let response;
+
+        while (_.get(response, 'choice') !== 'travel') {
+            response = await prompt([{
+                type: 'list',
+                name: 'choice',
+                message: 'What do you want to do?',
+                choices: [{
+                    name: 'Travel to next destination',
+                    value: 'travel'
+                }, {
+                    name: personAction,
+                    value: 'person'
+                }, {
+                    name: placeAction,
+                    value: 'place'
+                }, {
+                    name: 'Exit game',
+                    value: 'exit'
+                }],
+                validate: validator
+            }]);
+
+            if (response.choice === 'exit') {
+                console.log('** Bye');
+                process.exit();
+            }
+
+            if (response.choice === 'travel') {
+                let choices = [];
+                let rightChoice = getRandomInt(1, 4);
+                d('Random int: ' + rightChoice);
+
+                let alreadyAdded = [];
+                alreadyAdded.push(nextCorrectCity);
+
+                let i = 1;
+                while (choices.length < 3) {
+                    if (rightChoice === i) {
+                        choices.push({ name: nextCorrectCity, value: rightChoice });
+                        i++;
+                        continue;
+                    }
+
+                    let choice = getRandomData(Object.keys(data.cities));
+                    let cityToAdd = data.cities[choice].name;
+                    if (alreadyAdded.indexOf(cityToAdd) >= 0) {
+                        continue;
+                    }
+
+                    alreadyAdded.push(cityToAdd);
+                    choices.push({ name: cityToAdd, value: i });
+
+                    i++;
+                }
+                d(choices);
+
+                addSeparator();
+                let answer = await prompt([ {
+                    type: 'list',
+                    name: 'place',
+                    message: 'Which city do you want to travel to?',
+                    choices: choices
+                }]);
+                d(answer);
+
+                cityChoice = answer.place;
+                if (cityChoice === rightChoice) {
+                    correctCity = true;
+
+                    addSeparator();
+                    console.log('Correct city, good job...');
+                    addSeparator();
+
+                    city = cityChoice;
+                    nextCorrectCity = data.cities[getRandomData(Object.keys(data.cities))].name;
+                    while (nextCorrectCity === city) {
+                        nextCorrectCity = data.cities[getRandomData(Object.keys(data.cities))].name;
+                    }
+                } else {
+                    correctCity = false;
+
+                    addSeparator();
+                    console.log('Wrong city, continue...');
+                    addSeparator();
+                }
+            }
+        }
+    }
+
+    /*
     console.log('Which landmark am I talking about: ' + chosenTidbit);
+
+    let random = await prompt([ {
+        type: 'input',
+        name: 'username',
+        message: 'What is your user name',
+        validate: validator
+    }]);
+    d(random);
 
     while (!correct) {
         let choices = [];
@@ -164,6 +286,7 @@ async function main() {
 
         console.log('Wrong answer, try again....');
     }
+    */
 }
 
 
@@ -199,11 +322,12 @@ function getRandomData(data) {
 
 
 function getRandomInt(min, max) {
-    e('getRandomInt(%s,%s)', min, max);
+    e('getRandomInt(' + min + ',' + max + ')');
     min = Math.ceil(min);
     max = Math.floor(max);
-    ex('getRandomInt');
-    return Math.floor(Math.random() * (max - min)) + min;
+    let response = Math.floor(Math.random() * (max - min)) + min;
+    ex('getRandomInt(' + response + ')');
+    return response;
 }
 
 function e(str) {
@@ -211,5 +335,5 @@ function e(str) {
 }
 
 function ex(str) {
-    d_f('Exiting index::%s', str);
+    d_f('Exiting index::', str);
 }

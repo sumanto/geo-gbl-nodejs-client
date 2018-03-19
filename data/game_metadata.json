@@ -59,14 +59,14 @@
     "farmer": [ "farm", "farmers market" ],
     "nanny": [ "child care center" ],
     "artist": [ "studio", "museum", "cafe" ],
-    "musician": [],
-    "actor": [],
-    "diplomat": [],
+    "musician": [ "studio" ],
+    "actor": [ "studio" ],
+    "diplomat": [ "embassy" ],
     "truck driver": [ "truck stop" ],
     "bus driver": [ "bus stop", "bus depot" ],
     "dentist": [ "office" ],
     "student": [ "school", "cafeteria" ],
-    "flight attendent": [ "airport" ]
+    "flight attendant": [ "airport" ]
   },
   "evidence-items": {
     "all": {
@@ -123,5 +123,7 @@
       "Hope you like the on-flight movie.",
       "Hope you like the on-flight meal."
     ]
-  }
+  },
+  "person-actions": [ "Talk to", "Speak to", "Query", "Ask", "Question" ],
+  "place-actions": [ "Investigate", "Check out", "Search" ]
 }
