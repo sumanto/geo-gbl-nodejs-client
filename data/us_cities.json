@@ -10,7 +10,7 @@
     "failure": "Landmarco Steallioni has escaped your grasp. Better luck next time."
   },
   "cities": {
-    "sfo": {
+    "San Francisco": {
       "name": "San Francisco",
       "description": "San Francisco, officially the City and County of San Francisco, is the cultural, commercial, and financial center of Northern California",
       "spelled_as": "/ˌsæn frənˈsɪskoʊ, fræn-/",
@@ -22,40 +22,39 @@
         "Golden Gate Bridge": {
           "description": "",
           "tidbits": [
-            "The Frommer's travel guide describes it as possibly the most beautiful, certainly the most photographed, bridge in the world",
-            "One of the most iconic bridges in the United States, and has been called one of the Seven Wonders of the Modern World",
-            "If you untangled all of its cables, they would stretch around the world 3 times"
+            "the Frommer's travel guide describes it as possibly the most beautiful, certainly the most photographed, bridge in the world",
+            "one of the most iconic bridges in the United States, and has been called one of the Seven Wonders of the Modern World",
+            "if you untangled all of its cables, they would stretch around the world 3 times"
           ]
         },
         "Alcatraz Island": {
           "tidbits": [
-            "It was developed with facilities for a lighthouse, a military fortification, a military prison",
-            "It had a federal prison from 1934 to 1963",
-            "During its 29 years of operation, the penitentiary claimed that no prisoner successfully escaped"
+            "developed with facilities for a lighthouse, a military fortification, a military prison",
+            "it had a federal prison from 1934 to 1963",
+            "during its 29 years of operation, the penitentiary claimed that no prisoner successfully escaped"
           ]
         },
         "Lombard Street": {
           "tidbits": [
-            "This street is famous for a steep, one-block section with eight hairpin turns. ",
-            "The famous one-block section, claimed to be \"the crookedest street in the world\"",
-            ""
+            "the street is famous for a steep, one-block section with eight hairpin turns. ",
+            "the famous one-block section, claimed to be \"the crookedest street in the world\""
           ]
         },
         "Pier 39": {
           "tidbits": [
-            "Its famous for sea lions.",
-            "You can take a cruise to under a famous bridge."
+            "famous for sea lions.",
+            "where you can take a cruise to under a famous bridge."
           ]
         },
         "Cable Cars": {
           "tidbits": [
-            "World's last manually operated cable car system."
+            "world's last manually operated cable car system."
           ]
         }
       },
       "steal": [ "The Golden Gate Bridge", "Alcatraz Prison", "Cable Cars", "AT & T Park Stadium", "San Francisco Zoo" ]
     },
-    "nyc": {
+    "New York": {
       "name": "New York",
       "description": "",
       "wikipedia": "",
@@ -72,8 +71,8 @@
       },
       "steal": [ "The Golden Gate Bridge", "Alcatraz Prison", "Cable Cars", "AT & T Park Stadium", "San Francisco Zoo" ]
     },
-    "washington": {
-      "name": "Washington",
+    "Washington DC": {
+      "name": "Washington DC",
       "description": "",
       "wikipedia": "",
       "wikitravel": "",
@@ -88,7 +87,7 @@
       },
       "steal": [ "The White House", "Alcatraz Prison", "Cable Cars", "AT & T Park Stadium", "San Francisco Zoo" ]
     },
-    "la": {
+    "Los Angeles": {
       "name": "Los Angeles",
       "description": "\"Los Angeles\" is the entertainment capital of the world",
       "wikipedia": "",

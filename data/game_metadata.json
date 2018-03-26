@@ -1,9 +1,5 @@
 {
   "attributes": {
-    "sex": {
-      "male": [],
-      "female": []
-    },
     "eyes": {
       "blue": {
         "similars": [
@@ -225,35 +221,40 @@
     ]
   },
   "evidence-items": {
-    "all": {
-      "wallet": {},
-      "road map": {},
-      "travel guide": {},
-      "bounced check": {},
-      "architectural drawings": {},
-      "notebook": {},
-      "money belt": {}
+    "wallet": {
+      "wrong": [
+        "The wallet is empty."
+      ]
     },
-    "wrong": {
-      "wallet": {
-        "description": [
-          "The wallet is empty."
-        ]
-      },
-      "bounced check": {
-        "description": []
-      },
-      "notebook": {
-        "description": [
-          "The notebook is empty.",
-          "The notebook has some beautiful drawings of people."
-        ]
-      },
-      "money belt": {
-        "wrong-place": [
-          "The money-belt is empty."
-        ]
-      }
+    "road map": {
+      "wrong": [
+        "The road map is of the city.",
+        "The road map is all torn up."
+      ]
+    },
+    "travel guide": {
+      "wrong": [
+        "The travel guide is shredded.",
+        "The travel guide is all smudged."
+      ]
+    },
+    "bounced check": {
+      "wrong": [ ]
+    },
+    "architectural drawings": {
+      "wrong": [ ]
+    },
+    "notebook": {
+      "wrong": [
+        "The notebook is empty.",
+        "The notebook has some beautiful drawings of people.",
+        "The notebook just has some scribbles."
+      ]
+    },
+    "money belt": {
+      "wrong": [
+        "The money-belt is empty."
+      ]
     }
   },
   "wrong-person": {
@@ -285,7 +286,7 @@
     "Check out",
     "Search"
   ],
-  "eye-sentences-similars": [
+  "eyes-sentences-similars": [
     "had eyes which were"
   ],
   "hair-sentences-similars": [
