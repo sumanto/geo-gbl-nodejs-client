@@ -96,7 +96,11 @@ async function main() {
        let values =  Object.keys(metadata.attributes[key]);
        thiefAttributes[key] = getRandomData(values);
     }
-    d('thief attributes:', JSON.stringify(thiefAttributes));
+
+    addSeparator();
+    console.log('thief attributes:');
+    console.log(JSON.stringify(thiefAttributes, null, 4));
+    addSeparator();
 
 
     //--------------------------------------------
@@ -125,6 +129,11 @@ async function main() {
     addSeparator();
 
 
+    // Eating:
+    // - looking forward to eating
+    // - craving
+    // - searching for eating places serving
+    // -
     let found = false;
     let correctCity = false;
     let cityChoice = null;

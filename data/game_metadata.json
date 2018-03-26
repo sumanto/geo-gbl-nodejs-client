@@ -1,89 +1,238 @@
 {
   "attributes": {
     "sex": {
-      "male": {},
-      "female": {}
+      "male": [],
+      "female": []
     },
     "eyes": {
-      "amber": {},
-      "blue": {},
-      "brown": {},
-      "gray": {},
-      "green": {},
-      "hazel": {},
-      "red": {}
+      "blue": {
+        "similars": [
+          "color of ocean",
+          "color of clear sky",
+          "color cerulean",
+          "color indigo"
+        ]
+      },
+      "brown": {
+        "similars": [
+          "color of cocoa",
+          "khaki colored",
+          "chocolate colored",
+          "mahagony colored"
+        ]
+      },
+      "gray": {
+        "similars": [
+          "color of overcast sky",
+          "ashes colored"
+        ]
+      },
+      "green": {
+        "similars": [
+          "color of grass",
+          "color of leaf"
+        ]
+      },
+      "red": {
+        "similars": [
+          "color of blood",
+          "color of cherry",
+          "color of ruby",
+          "color describing ruddy"
+        ]
+      }
     },
     "hair": {
-      "black": {},
-      "blond": {},
+      "black": {
+        "similars": [
+          "pitch dark sky",
+          "color of tar"
+        ]
+      },
+      "blond": {
+        "similars": [
+          "pale yellow color",
+          "golden colored"
+        ]
+      },
       "copper": {},
-      "red": {},
-      "grey": {},
-      "white": {},
-      "bald": {}
+      "red": {
+        "similars": [
+          "color of blood",
+          "color of cherry",
+          "color of ruby",
+          "color describing ruddy"
+        ]
+      },
+      "grey": {
+        "similars": [
+          "color of overcast sky",
+          "ashes colored"
+        ]
+      },
+      "white": {
+        "similars": [
+          "silver color",
+          "ivory colored"
+        ]
+      },
+      "bald": {
+        "alternates": [
+          "The head was completely bare of hair.",
+          "The head was naked with no hairs.",
+          "The head was completely hairless."
+        ]
+      }
     },
     "hobby": {
-      "fishing": {},
-      "photography": {},
-      "knitting": {},
-      "birdwatching": {},
-      "running": {}
+      "fishing": [],
+      "photography": [],
+      "knitting": [],
+      "birdwatching": [],
+      "running": []
     },
     "food": {
-      "American": {},
-      "Indian": {},
-      "Mexican": {},
-      "Italian": {},
-      "Japanese": {}
+      "comfort American": [
+        "apple pies and chilli mac",
+        "casseroles and cupcakes",
+        "chicken soup and cornbread",
+        "fried chicken and mashed potatoes",
+        "hamburgers and fries"
+      ],
+      "Italian": [
+        "Margherita pizza",
+        "pasta alla carbonara",
+        "lasagne",
+        "osso buco alla Milanese",
+        "gellato and torrone",
+        "tiramisu"
+      ],
+      "Mexican": [
+        "tamales",
+        "burritos",
+        "tostadas",
+        "enchiladas",
+        "quesadilla"
+      ],
+      "Indian": [
+        "biryani",
+        "idli and dosa",
+        "chole bhature",
+        "tandoori chicken",
+        "rajma",
+        "butter chicken"
+      ],
+      "Japanese": [
+        "sushi",
+        "tempura",
+        "sashimi",
+        "onigiri",
+        "mochi",
+        "bento"
+      ]
     },
     "feature": {
-      "hat": {},
-      "cap": {},
-      "sunglasses": {},
-      "contacts": {},
-      "jewellery": {},
-      "scar": {},
-      "tatoo": {}
+      "cap": [
+        "was wearing a bonnet.",
+        "was wearing a headdress.",
+        "was wearing a bowler.",
+        "was wearing a stovepipe.",
+        "could not see the style of hair."
+      ],
+      "sunglasses": [
+        "had Polaroids on.",
+        "could not see if eyes were dangerous.",
+        "had spectacles on.",
+        "had shades on."
+      ],
+      "jewellery": [
+        "was wearing earrings.",
+        "had a brooch on.",
+        "was wearing cufflinks.",
+        "had a belly chain.",
+        "had a nose ring on."
+      ],
+      "scar": [
+        "had a scar on the right chin.",
+        "had a scar under the left eye.",
+        "had a prominent scar on the neck.",
+        "showed a scar on the elbow.",
+        "had a bad scar on back of left hand."
+      ],
+      "tatoo": [
+        "had a tatoo of Eagle.",
+        "had a tatoo of crossed swords.",
+        "had a tatoo of Angel.",
+        "had a tatoo of flying birds."
+      ]
     },
     "vehicle": {
-      "suv": {},
-      "sports car": {},
-      "sedan": {},
-      "station wagon": {},
-      "bike": {}
+      "suv": [],
+      "sports car": [],
+      "sedan": [],
+      "station wagon": [],
+      "bike": []
     }
   },
   "person-places": {
-    "policeman": [ "park", "museum", "cafe" ],
-    "tourist": [ "market", "museum", "cafe" ],
-    "farmer": [ "farm", "farmers market" ],
-    "nanny": [ "child care center" ],
-    "artist": [ "studio", "museum", "cafe" ],
-    "musician": [ "studio" ],
-    "actor": [ "studio" ],
-    "diplomat": [ "embassy" ],
-    "truck driver": [ "truck stop" ],
-    "bus driver": [ "bus stop", "bus depot" ],
-    "dentist": [ "office" ],
-    "student": [ "school", "cafeteria" ],
-    "flight attendant": [ "airport" ]
+    "policeman": [
+      "park",
+      "museum",
+      "cafe"
+    ],
+    "tourist": [
+      "market",
+      "museum",
+      "cafe"
+    ],
+    "farmer": [
+      "farm",
+      "farmers market"
+    ],
+    "nanny": [
+      "child care center"
+    ],
+    "artist": [
+      "studio",
+      "museum",
+      "cafe"
+    ],
+    "musician": [
+      "studio"
+    ],
+    "actor": [
+      "studio"
+    ],
+    "diplomat": [
+      "embassy"
+    ],
+    "truck driver": [
+      "truck stop"
+    ],
+    "bus driver": [
+      "bus stop",
+      "bus depot"
+    ],
+    "dentist": [
+      "office"
+    ],
+    "student": [
+      "school",
+      "cafeteria"
+    ],
+    "flight attendant": [
+      "airport"
+    ]
   },
   "evidence-items": {
     "all": {
-      "wallet": {
-      },
-      "road map": {
-      },
-      "travel guide": {
-      },
-      "bounced check": {
-      },
-      "architectural drawings": {
-      },
-      "notebook": {
-      },
-      "money belt": {
-      }
+      "wallet": {},
+      "road map": {},
+      "travel guide": {},
+      "bounced check": {},
+      "architectural drawings": {},
+      "notebook": {},
+      "money belt": {}
     },
     "wrong": {
       "wallet": {
@@ -124,6 +273,27 @@
       "Hope you like the on-flight meal."
     ]
   },
-  "person-actions": [ "Talk to", "Speak to", "Query", "Ask", "Question" ],
-  "place-actions": [ "Investigate", "Check out", "Search" ]
+  "person-actions": [
+    "Talk to",
+    "Speak to",
+    "Query",
+    "Ask",
+    "Question"
+  ],
+  "place-actions": [
+    "Investigate",
+    "Check out",
+    "Search"
+  ],
+  "eye-sentences-similars": [
+    "had eyes which were"
+  ],
+  "hair-sentences-similars": [
+    "had hair which was"
+  ],
+  "food-sentences": [
+    "looking forward to eating",
+    "craving",
+    "searching for eating places serving"
+  ]
 }
